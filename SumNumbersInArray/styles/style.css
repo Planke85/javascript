@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    color: #CCCCCC;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 20% auto;
+    text-align: center;
+}
+
+input[type=text] {
+    text-align: center;
+}
