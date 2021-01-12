@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <title>Task 05</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="POST">
+            <h1>Calculator</h1>
+
+            <label for="number1">Please enter first number:</label>
+            <input type="text" id="number1" name="number1" ></br></br>
+
+            <label for="number2">Please enter second number:</label>
+            <input type="text" id="number2" name="number2" ></br></br>
+
+            <select id="calculate" name="calculate">
+                <option selected="selected" disabled="disabled">Please select</option>
+                <option value="sum">Addition</option>
+                <option value="sub">Subtraction</option>
+                <option value="mul">Multiplication</option>
+                <option value="div">Division</option>
+                <option value="mod">Modulus</option>
+            </select><br><br>
+            <input type="button" id="btn" value="Calculate">
+        </form>
+        <p id="massage"></p>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

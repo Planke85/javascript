@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    color: white;
+}
+
+#zodiac {
+    font-size: 36px;
+    margin-top: 300px;
+    text-align: center;
+}

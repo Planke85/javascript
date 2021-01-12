@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <title>Homework part 2</title>
+</head>
+<body>
+    <form class="form" action="" method="POST">
+        <h2>Age Calculator</h2>
+        <label for="age">Please enter Age:</label><br><br>
+        <input type="text" id="age"><br><br>
+
+        <select id="convertAge" name="convertAge">
+            <option value="noSelect" selected="selected" disabled="disabled">Please select</option>
+            <option value="humanAge">Converted to Dog age</option>
+            <option value="dogAge">Converted to Human age</option>
+        </select><br><br>
+        <input type="button" id="btn" value="Calculate">
+        <p id="massage"></p>
+
+    </form>
+    <script src="script/script.js"></script>
+</body>
+</html>

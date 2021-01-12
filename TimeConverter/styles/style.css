@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.container {
+    margin: 20% auto;
+    text-align: center;
+}
+
+input[type=text] {
+    outline: none;
+    text-align: center;
+}
+
+#btn {
+    background-color: chocolate;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#btn:hover {
+    background-color: cyan;
+    color: darkblue;
+    transform: scale(1.1);
+}
