@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    margin: 20% auto;
+    text-align: center;
+}
+
+input[type=text] {
+    outline: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+}
+.btn {
+    margin: 5px;
+}
+
+#add {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#add:hover {
+    background-color: yellow;
+    color: blue;
+}
+
+#view {
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#view:hover {
+    background-color: transparent;
+}
+
+#massage {
+    text-transform: lowercase;
+}
+
+#massage::first-letter{
+    text-transform: uppercase;
+}

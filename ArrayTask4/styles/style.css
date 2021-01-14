@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    color: white;
+}
+
+.container {
+    margin: 10% auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type=text]{
+    outline: none;
+    background-color: yellowgreen;
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#btn {
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#btn:hover {
+    background-color: yellow;
+    transform: scale(1.1);
+}

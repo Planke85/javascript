@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    margin: 20% auto;
+    text-align: center;
+}
+
+input[type=text]{
+    outline: none;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#btn {
+    background-color: lightskyblue;
+    border: 1px solid darkblue;
+    padding: 3px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#btn:hover {
+    background-color: green;
+}
