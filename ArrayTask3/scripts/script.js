@@ -1,7 +1,6 @@
 let numInArray = [];
 let maxNumber = 0;
 let minNumber = 0;
-let sumNumber = 0;
 
 function getMaxNumber(){
     for(let i = 0; i < numInArray.length; i++){
@@ -20,12 +19,6 @@ function getMinNumber(){
     }
 }
 
-function sumNumbersInArray(){
-    for(let i = 0; i < numInArray.length; i++){
-        sumNumber += numInArray[i];
-    }
-}
-
 function calculate(){
     let inputNum = parseInt(document.getElementById("inputNum").value);
 
@@ -37,11 +30,10 @@ function calculate(){
         document.form.reset();
         getMaxNumber();
         getMinNumber();
-        sumNumbersInArray();
         document.getElementById("massage").innerHTML = `Num in array: [${numInArray}] <br>
                                                         Max number: ${maxNumber} <br>
                                                         Min number: ${minNumber} <br>
-                                                        Sum number: ${sumNumber}`;
+                                                        Min number + Max number = ${minNumber + maxNumber}`;
     }
 }
 
