@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <title>Recipe page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe page</h1>
+
+        <form action="" method="post" name="form">
+            <label for="recipeName">Enter recipe name:</label>
+            <input type="text" id="recipeName" name="recipeName"><span class="error"></span></br></br>
+
+            <label for="ingredientsNumber">How many ingrediends do we need for the recipe?</label>
+            <input type="text" id="ingredientsNumber" name="ingredientsNumber"><span class="error"></span></br></br>
+            <input type="button" id="add"  class="btn" value="Add Recipe"></br></br>
+
+            <label for="ingredientsName">Enter Ingredients name:</label>
+            <input type="text" id="ingredientsName" name="ingredientsName"><span class="error"></span></br></br>
+            <input type="button" id="addIngredients"  class="btn" value="Add Ingeredients">
+        </form>
+        <h2 id="title"></h2>
+        <p id="text"></p>
+        <div id="table">
+
+        </div>
+
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
