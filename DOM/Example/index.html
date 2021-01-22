@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <title>Create dinamic table</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create dinamic table</h1>
+
+        <form action="" method="post" name="form">
+            <div>
+                <label for="row">Enter rows number:</label>
+                <input type="text" id="row" name="row"></br>
+                <small class="error"></small>
+            </div></br>
+            <div>
+                <label for="column">Enter column number:</label>
+                <input type="text" id="column" name="column"></br>
+                <small class="error"></small>
+            </div></br>
+
+            <input type="button" id="btn" value="Create Table">
+        </form>
+        <div id="table"></div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
