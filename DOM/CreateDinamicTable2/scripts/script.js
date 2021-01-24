@@ -36,16 +36,18 @@ function createTable(){
         document.getElementsByClassName("error")[1].innerHTML = "* Please enter valid number of columns!";
     }
     else{
-        document.getElementById("table").innerHTML = `<table></table>`;
+        let myTable = `<table>`;
 
         for(let i = 1; i <= rows; i++){
-            document.getElementsByTagName("table")[0].innerHTML += `<tr>`;
+            myTable += `<tr>`;
 
             for(let j = 1; j <= columns; j++){
-                document.getElementsByTagName("table")[0].innerHTML += `<td>Row ${i} Col ${j}</td>`;
+                myTable += `<td>Row ${i} Col ${j}</td>`;
             }
-            document.getElementsByTagName("table")[0].innerHTML += `</tr>`;
+            myTable += `</tr>`;
         }
+        myTable += `</table>`;
+        document.getElementById("table").innerHTML = myTable;
     }
 }
 
