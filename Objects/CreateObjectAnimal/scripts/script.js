@@ -1,7 +1,7 @@
 let name = document.getElementById("name");
 let kind = document.getElementById("animKind");
 
-function Animal(name,kind,speak){
+function Animal(name,kind){
     this.name = name;
     this.kind = kind;
     this.speak = function(){

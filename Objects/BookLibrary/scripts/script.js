@@ -2,7 +2,7 @@ let title = document.getElementById("title");
 let author = document.getElementById("author");
 let readStatus = document.getElementById("readStatus");
 
-function Book(title,author,readStatus,isRead){
+function Book(title,author,readStatus){
     this.title = title;
     this.author = author;
     this.readStatus = readStatus;
