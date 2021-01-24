@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <title>Book Library</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Library</h1>
+
+        <form action="" method="post" name="form">
+            <label for="title">Please enter title:</label>
+            <input type="text" id="title" name="title"><span class="error"></span></br></br>
+
+            <label for="author">Please enter author:</label>
+            <input type="text" id="author" name="author"><span class="error"></span></br></br>
+
+            <select id="readStatus" name="readStatus">
+                <option value="noSelect" selected="selected" disabled="disabled">Please select</option>
+                <option value="read">Read</option>
+                <option value="notRead">Not Read</option>
+            </select></br><span class="error"></span></br></br>
+
+            <input type="button" id="btn" class="btn" value="Check">
+        </form></br>
+
+        <p id="text"></p>
+
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
