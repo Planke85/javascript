@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <title>Header Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Header Generator</h1>
+        <form action="" method="POST">
+            <label for="title">Please enter some text:</label></br></br>
+            <input type="text" id="title" name="title">
+            <small class="error"></small></br></br>
+
+            <label for="color">Please enter color</label></br></br>
+            <input type="text" id="color" name="color">
+            <small class="error"></small></br></br>
+
+            <input type="button" id="btn" value="Generate h1">
+        </form>
+
+        <h3 id="message"></h3>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
