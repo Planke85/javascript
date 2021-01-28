@@ -1,0 +1,44 @@
+body {
+    background-color: blueviolet;
+}
+
+
+.jumbotron {
+    background-image: url(https://sweken.com/wp-content/uploads/2020/09/blog-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 83vh;
+    margin: 0;
+}
+
+div.card {
+    margin: 10px;
+    background-color: darkslateblue;
+    color: white;
+    box-shadow: 2px 2px gray;
+}
+
+div.card:hover {
+    box-shadow: none;
+    background-color: rgb(6, 38, 97);
+}
+
+h5.card-title {
+    height: 48px;
+    overflow: hidden;
+}
+
+p.card-text {
+    height: 72px;
+    overflow: hidden;
+}
+
+footer {
+    height: 10vh;
+}
+footer p {
+    line-height: 10vh;
+    text-align: center;
+    color: #FFFFFF;
+}
