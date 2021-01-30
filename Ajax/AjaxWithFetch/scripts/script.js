@@ -1,13 +1,6 @@
 let link = document.getElementsByClassName("nav-link")[0];
 let home = document.getElementsByClassName("navbar-brand")[0];
-
 let postCard = document.getElementById("blog-post-card");
-let blogPosts = [];
-
-function BlogPost(title,body){
-    this.title = title;
-    this.body = body;
-}
 
 function getPosts(){
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -19,19 +12,15 @@ function getPosts(){
             throw new Error(result.status);
         }
     })
-    .then(function(posts){
-        for(const post of posts){
-            let newPost = new BlogPost(post.title, post.body);
-            blogPosts.push(newPost);
-        }
-        renderBlogPosts();
+    .then(function(blogPosts){
+        renderBlogPosts(blogPosts);
     })
     .catch(function(error){
         console.log(error);
     })
 }
 
-function renderBlogPosts(){
+function renderBlogPosts(blogPosts){
     postCard.innerHTML = '';
 
     for(const blogPost of blogPosts){

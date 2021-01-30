@@ -1,36 +1,25 @@
-let link = $(".nav-link").eq(0);
-let home = $(".navbar-brand").eq(0);
-
+let link = $(".nav-link");
+let home = $(".navbar-brand");
 let postCard = $("#blogPostCard");
-let blogPosts = [];
-
-function BlogPost(title,body){
-    this.title = title;
-    this.body = body;
-}
 
 function getPosts(){
-    const urlData = "https://jsonplaceholder.typicode.com/posts";
+    let urlData = "https://jsonplaceholder.typicode.com/posts";
 
     $.ajax({
         url: urlData,
-        success: function(data){
-            for(let post of data){
-               let newPost = new BlogPost(post.title,post.body);
-               blogPosts.push(newPost);
-           }
-           renderBlogPosts();
+        success: function(blogPosts){
+           renderBlogPosts(blogPosts);
         },
         error: function(){
-            console.error('Error occured!');
+            console.error('Error!');
         }
     })
 }
 
-function renderBlogPosts(){
+function renderBlogPosts(blogPosts){
     postCard.innerHTML = '';
 
-    for(let blogPost of blogPosts){
+    for(const blogPost of blogPosts){
         postCard.append(
         `<div class="col-sm-6 col-md-4">
         <div class="card">
@@ -44,17 +33,14 @@ function renderBlogPosts(){
     }
 }
 
-
-
 link.click(function(){
     getPosts();
-	postCard.show();
+    postCard.show();
 });
 home.click(function(){
-	postCard.hide();
+    postCard.hide();
 })
 
-console.log(blogPosts)
 
 
 
