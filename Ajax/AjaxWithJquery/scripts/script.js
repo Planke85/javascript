@@ -31,7 +31,7 @@ function renderBlogPosts(){
     postCard.innerHTML = '';
 
     for(let blogPost of blogPosts){
-        postCard.innerHTML +=
+        postCard.append(
         `<div class="col-sm-6 col-md-4">
         <div class="card">
           <div class="card-body">
@@ -40,7 +40,7 @@ function renderBlogPosts(){
             <a href="#" class="btn btn-primary">Read more >>></a>
           </div>
         </div>
-      </div>`;
+      </div>`);
     }
 }
 
@@ -48,9 +48,10 @@ function renderBlogPosts(){
 
 link.click(function(){
     getPosts();
+	postCard.show();
 });
 home.click(function(){
-    postCard.innerHTML = "";
+	postCard.hide();
 })
 
 console.log(blogPosts)
