@@ -1,0 +1,26 @@
+body {
+    background-color: blueviolet;
+    color: #FFFFFF;
+}
+
+
+.jumbotron {
+    background-image: url(https://sweken.com/wp-content/uploads/2020/09/blog-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 83vh;
+    margin: 0;
+}
+td {
+    color: #FFFFFF;
+}
+
+footer {
+    height: 10vh;
+}
+footer p {
+    line-height: 10vh;
+    text-align: center;
+    color: #FFFFFF;
+}
