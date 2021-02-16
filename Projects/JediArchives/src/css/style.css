@@ -46,6 +46,8 @@ body {
     display: none;
 }
 
-#sortByName {
+#sortPeople,
+#sortPlanets,
+#sortShips {
     cursor: pointer;
 }
