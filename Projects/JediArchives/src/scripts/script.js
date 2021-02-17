@@ -4,12 +4,13 @@ let navigationService = {
     shipBtn : document.getElementById("shipsBtn"),
     nextBtn : document.getElementById("nextBtn"),
     previousBtn : document.getElementById("prevBtn"),
+    pageLimit: false,
     day: "",
     counter: 0,
     currentPage: 1,
     pageType: "",
     clickCounter: function(){
-        if(this.counter < 4 && this.day === new Date().getDay()){
+        if(this.counter < 50 && this.day === new Date().getDay()){
             navigationService.counter++
             return navigationService.pageLimit = true;
         }
@@ -70,16 +71,30 @@ let navigationService = {
     nextPage: function() {
         navigationService.currentPage++;
         uiService.toggleLoader(true)
-        if (navigationService.pageType === "people") starWarsApiService.getPeople(navigationService.currentPage)
-        if (navigationService.pageType === "planets") starWarsApiService.getPlanets(navigationService.currentPage)
-        if (navigationService.pageType === "ships") starWarsApiService.getShips(navigationService.currentPage)
+        navigationService.clickCounter();
+            if(navigationService.pageLimit){
+                if (navigationService.pageType === "people") starWarsApiService.getPeople(navigationService.currentPage)
+                if (navigationService.pageType === "planets") starWarsApiService.getPlanets(navigationService.currentPage)
+                if (navigationService.pageType === "ships") starWarsApiService.getShips(navigationService.currentPage)
+            }
+            else{
+                uiService.loadErrorMessage();
+                uiService.toggleLoader(false);
+            }
     },
     previousPage: function() {
         navigationService.currentPage--;
         uiService.toggleLoader(true)
-        if (navigationService.pageType === "people") starWarsApiService.getPeople(navigationService.currentPage)
-        if (navigationService.pageType === "planets") starWarsApiService.getPlanets(navigationService.currentPage)
-        if (navigationService.pageType === "ships") starWarsApiService.getShips(navigationService.currentPage)
+        navigationService.clickCounter();
+            if(navigationService.pageLimit){
+                if (navigationService.pageType === "people") starWarsApiService.getPeople(navigationService.currentPage)
+                if (navigationService.pageType === "planets") starWarsApiService.getPlanets(navigationService.currentPage)
+                if (navigationService.pageType === "ships") starWarsApiService.getShips(navigationService.currentPage)
+            }
+            else{
+                uiService.loadErrorMessage();
+                uiService.toggleLoader(false);
+            }
     },
     navButtonsCheck: function(response) {
         if (response.next === null) {
