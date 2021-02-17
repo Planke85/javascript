@@ -4,32 +4,63 @@ let navigationService = {
     shipBtn : document.getElementById("shipsBtn"),
     nextBtn : document.getElementById("nextBtn"),
     previousBtn : document.getElementById("prevBtn"),
+    day: "",
+    counter: 0,
     currentPage: 1,
     pageType: "",
+    clickCounter: function(){
+        if(this.counter < 4 && this.day === new Date().getDay()){
+            navigationService.counter++
+            return navigationService.pageLimit = true;
+        }
+        else if(this.day !== new Date().getDay()){
+            navigationService.day = new Date().getDay();
+            navigationService.counter = 0;
+            return navigationService.pageLimit = true;
+        }
+        else{
+            return navigationService.pageLimit = false;
+        }
+    },
     registerListeners: function() {
         this.peopleBtn.addEventListener("click", function() {
             if(navigationService.pageType === "people") return;
-
+            navigationService.clickCounter();
             uiService.toggleLoader(true);
-            starWarsApiService.getPeople(1);
+            if(navigationService.pageLimit){
+                starWarsApiService.getPeople(1);
+            }else {
+                uiService.loadErrorMessage();
+                uiService.toggleLoader(false);
+            }
             navigationService.currentPage = 1
             navigationService.pageType = "people"
         }),
 
         this.planetBtn.addEventListener("click", function() {
             if(navigationService.pageType === "planets") return;
-            
+            navigationService.clickCounter();
             uiService.toggleLoader(true);
-            starWarsApiService.getPlanets(1);
+            if(navigationService.pageLimit){
+                starWarsApiService.getPlanets(1);
+            }else{
+                uiService.loadErrorMessage();
+                uiService.toggleLoader(false);
+            }
             navigationService.currentPage = 1
             navigationService.pageType = "planets"
         }),
 
         this.shipBtn.addEventListener("click", function() {
             if(navigationService.pageType === "ships") return;
-            
+            navigationService.clickCounter();
             uiService.toggleLoader(true);
-            starWarsApiService.getShips(1);
+            if(navigationService.pageLimit){
+                starWarsApiService.getShips(1);
+            }else{
+                uiService.loadErrorMessage();
+                uiService.toggleLoader(false);
+            }
             navigationService.currentPage = 1
             navigationService.pageType = "ships"
         }),
@@ -73,13 +104,10 @@ let starWarsApiService = {
         $.ajax({
             url: peopleUrl,
             success: function(response) {
-                //console.log("success")
-                //console.log(response)
                 navigationService.navButtonsCheck(response)
                 uiService.loadPeoplePage(response.results)
             },
             error: function(response) {
-                //console.warn("error has occured")
                 uiService.loadErrorMessage();
             },
             complete: function() {
@@ -93,13 +121,10 @@ let starWarsApiService = {
         $.ajax({
             url: planetsUrl,
             success: function(response) {
-                //console.log("success")
-                //console.log(response)
                 navigationService.navButtonsCheck(response)
                 uiService.loadPlanetsPage(response.results)
             },
             error: function(response) {
-                //console.warn("error has occured")
                 uiService.loadErrorMessage();
             },
             complete: function() {
@@ -113,13 +138,10 @@ let starWarsApiService = {
         $.ajax({
             url: shipsUrl,
             success: function(response) {
-                //console.log("success")
-                //console.log(response)
                 navigationService.navButtonsCheck(response)
                 uiService.loadShipsPage(response.results)
             },
             error: function(response) {
-                //console.warn("error has occured")
                 uiService.loadErrorMessage();
             },
             complete: function() {
