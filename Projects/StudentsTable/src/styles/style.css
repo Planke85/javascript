@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.task {
+    text-align: center;
+}
+
+.task2 {
+    margin-top: 20%;
+    text-align: center;
+}
