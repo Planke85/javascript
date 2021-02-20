@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+}
+
+.card {
+    background-image: linear-gradient(to right, #620496, #7F07C1);
+    color: #FFFFFF;
+    box-shadow: 1px 2px #CCCCCC;
+}
+
+#idResult {
+    text-align: center;
+    color: chartreuse;
+}
