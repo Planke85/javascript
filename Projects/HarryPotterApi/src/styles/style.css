@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: #FFFFFFF;
+}
+
+.card {
+    background-image: linear-gradient(to right, #565695, #1A1A59);
+    color: #D49A6A;
+    border: 1px solid #D49A6A;
+    border-radius: 15px;
+    box-shadow: -3px -3px 10px #D49A6A;
+}
+
+input[type=search],
+input[type=search]:focus {
+    background-color: #D49A6A;
+    color: #111111;
+}
