@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/styles/style.css" type="text/css" />
+    <title>StudentApi</title>
+</head>
+<body>
+
+    <div class="row">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-center">Students</a>
+              <form class="d-flex">
+                <input  id="search" class="form-control me-2" type="search" placeholder="Search student">
+              </form>
+            </div>
+          </nav>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">First name <i id="ascFirstName" class="bi bi-sort-alpha-down"></i> <i id="descFirstName" class="bi bi-sort-alpha-up"></i></th>
+                        <th scope="col">Last name <i id="ascLastName" class="bi bi-sort-alpha-down"></i> <i id="descLastName" class="bi bi-sort-alpha-up"></i></th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender <i id="ascGender" class="bi bi-sort-down-alt"></i> <i id="descGender" class="bi bi-sort-up-alt"></i></th>
+                        <th scope="col">City<i id="ascCity" class="bi bi-sort-alpha-down"></i> <i id="descCity" class="bi bi-sort-alpha-up"></i></th>
+                        <th scope="col">Average grade <i id="ascAvgGrade" class="bi bi-sort-down-alt"></i> <i id="descAvgGrade" class="bi bi-sort-up-alt"></i></th>
+                        <th scope="col">Age <i id="ascAge" class="bi bi-sort-down-alt"></i> <i id="descAge" class="bi bi-sort-up-alt"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="content">
+                </tbody>
+          </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
